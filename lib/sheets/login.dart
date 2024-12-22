@@ -7,9 +7,11 @@ import 'homepage.dart';
 //void main() => runApp(SocialMediaLoginApp());
 
 class SocialMediaLoginApp extends StatelessWidget {
+  const SocialMediaLoginApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );
@@ -17,6 +19,8 @@ class SocialMediaLoginApp extends StatelessWidget {
 }
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -27,8 +31,8 @@ class LoginPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment:CrossAxisAlignment.stretch,
             children: [
-              SizedBox(height:60),
-              Text(
+              const SizedBox(height:60),
+              const Text(
                 "Lets sign you in",
                 textAlign: TextAlign.left,
                 style: TextStyle(
@@ -38,13 +42,13 @@ class LoginPage extends StatelessWidget {
                   ),
                 
               ),
-              Text(
+              const Text(
                 "Welcome back to cookify...",
                 style: TextStyle(),
                 textAlign: TextAlign.left,
               ),
               const SizedBox(height: 40),
-              Text("Email",
+              const Text("Email",
               textAlign: TextAlign.left,),
               SizedBox(
                 height: 30,
@@ -53,23 +57,23 @@ class LoginPage extends StatelessWidget {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
                       hintText: "Enter Email",
-                      contentPadding: EdgeInsets.all(10),
+                      contentPadding: const EdgeInsets.all(10),
                       hintStyle:
-                          TextStyle(color: const Color.fromARGB(179, 158, 157, 157),fontSize:15),
+                          const TextStyle(color: Color.fromARGB(179, 158, 157, 157),fontSize:15),
                       filled: true,
                       fillColor: const Color.fromARGB(123, 157, 154, 154)),
                 ),
               ),
-              SizedBox(height:20),
-              Text("Password"),
+              const SizedBox(height:20),
+              const Text("Password"),
               SizedBox(
                 height:30,
                 child: TextFormField(
                     obscureText: true,
                     decoration: InputDecoration(
                       hintText: 'Enter Password',
-                      contentPadding: EdgeInsets.all(10),
-                      hintStyle: TextStyle(color: const Color.fromARGB(179, 158, 157, 157),fontSize:15),
+                      contentPadding: const EdgeInsets.all(10),
+                      hintStyle: const TextStyle(color: Color.fromARGB(179, 158, 157, 157),fontSize:15),
                       filled:true,
                       fillColor: const Color.fromARGB(123, 157, 154, 154),
                       border: OutlineInputBorder(
@@ -82,17 +86,17 @@ class LoginPage extends StatelessWidget {
               
               GestureDetector(
                 onTap: () {  },
-                child: Text(
+                child: const Text(
                   "Forgot Password?",
                   style: TextStyle(
-                    color: const Color.fromARGB(255, 15, 119, 204),
+                    color: Color.fromARGB(255, 15, 119, 204),
                     fontWeight:FontWeight.w500
                   ),
                   textAlign:TextAlign.right,
                         ),),
-              SizedBox(height:30),
+              const SizedBox(height:30),
               Center(
-                child: Container(
+                child: SizedBox(
                   width: 250,
                   child: ElevatedButton(
                     style:ElevatedButton.styleFrom(
@@ -101,32 +105,32 @@ class LoginPage extends StatelessWidget {
                     onPressed: (){
                   
                     }, 
-                    child: Text("Sign in",
+                    child: const Text("Sign in",
                     style:TextStyle(color: Colors.white))
                   ),
                 ),
               ),
-              Text("or continue with",
+              const Text("or continue with",
               style:TextStyle(),
               textAlign: TextAlign.center,),
-              SizedBox(height:20),
+              const SizedBox(height:20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                SizedBox(width:80,child: ElevatedButton(onPressed:(){}, child:Text("google")) ),
-                SizedBox(width:80,child: ElevatedButton(onPressed: (){}, child: Icon(Icons.apple))),
-                SizedBox(width:80,child: ElevatedButton(onPressed: (){}, child: Icon(Icons.facebook)))
+                SizedBox(width:80,child: ElevatedButton(onPressed:(){}, child:const Text("google")) ),
+                SizedBox(width:80,child: ElevatedButton(onPressed: (){}, child: const Icon(Icons.apple))),
+                SizedBox(width:80,child: ElevatedButton(onPressed: (){}, child: const Icon(Icons.facebook)))
               ],),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
 
-              Center(child: Text("Don't have an account?")),
+              const Center(child: Text("Don't have an account?")),
               Center(
                 child: GestureDetector(
                   onTap: () {  },
-                  child: Text(
+                  child: const Text(
                     "Register Now",
                     style: TextStyle(
-                      color: const Color.fromARGB(255, 15, 119, 204),
+                      color: Color.fromARGB(255, 15, 119, 204),
                       fontWeight:FontWeight.w500
                     ),
                     ),),
